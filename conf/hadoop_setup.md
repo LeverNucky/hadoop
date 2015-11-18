@@ -14,8 +14,24 @@ first switch to hadoop user
 ````
 ssh-keygen -t rsa -P ""
 cd ~/.ssh
-cat id_rsa.pub >> authorized_keys
+cat id_rsa.pub >> authorized_keysp
 ````
+## Step 4 setup hadoop
+Download hadoop online, testing version is hadoop-1.2.1
+cd download directory
+````
+sudo tar -zxf hadoop-1.2.1.tar.gz -C /home/hadoop/
+cd /home
+sudo chown -R hadoop:hadoop hadoop
+````
+## Step 5 hadoop conf modification
+- In conf/hadoop-env.sh（find #export JAVA_HOME=...,delete #,then add your own explicit $JAVA_HOME）;
+````
+export JAVA_HOME=/usr/lib/jvm/java-sun
 
+````
+- replace core-site.xml
+- replace mapred-site.xml
+- replace hdfs-site.xml
  
  
