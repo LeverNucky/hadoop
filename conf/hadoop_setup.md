@@ -36,5 +36,12 @@ export JAVA_HOME=/usr/lib/jvm/java-sun
 
 - replace mapred-site.xml
 - replace hdfs-site.xml
+## Final test
+````
+bin/hadoop namenode -format
+bin/start-all.sh
+jps
+
+````
  
  
