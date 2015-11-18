@@ -28,9 +28,12 @@ sudo chown -R hadoop:hadoop hadoop
 - In conf/hadoop-env.sh（find #export JAVA_HOME=...,delete #,then add your own explicit $JAVA_HOME）;
 ````
 export JAVA_HOME=/usr/lib/jvm/java-sun
-
 ````
-- replace core-site.xml
+- replace core-site.xml 
+
+  Note: 1. use port 9002 rather than port 9000 because the latter one seemed to be used and caused problems
+        2. hadoop.tmp.dir should not be set to system path , otherwise namenode would not work once we reboot our system.
+
 - replace mapred-site.xml
 - replace hdfs-site.xml
  
