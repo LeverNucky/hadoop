@@ -1,1 +1,1 @@
-# CS433 HW2 Inverted Index  
+CS433 HW2 Inverted Index  
